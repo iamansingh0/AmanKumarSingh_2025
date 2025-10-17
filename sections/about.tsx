@@ -142,7 +142,7 @@ export default function About() {
             </p>
 
             <div className="flex gap-3 mt-4">
-              <button className="px-4 py-2 rounded-md bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 transition"
+              <button className="px-4 py-2 rounded-md bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 transition cursor-pointer"
                 onClick={scrollToContact}
               >
                 Connect

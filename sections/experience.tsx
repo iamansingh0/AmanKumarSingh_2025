@@ -10,7 +10,7 @@ const experiences = [
     duration: "July 2024 - Present",
     description:
       "Led development of responsive and reusable UI components using React.js and Salesforce LWC, improving frontend development efficiency by 20% and reducing redundant code. Developed a knowledge base for call center executives, cutting average query handling time from 10 minutes to 1 minute and reducing TAT by 35%, while lowering call drop rates by 25%.",
-    tech: ["React.js", "Salesforce LWC", "Apex", "TypeScript", "GitLab"],
+    tech: ["React.js", "Salesforce LWC", "Apex", "JavaScript", "GitLab"],
     icon: Briefcase,
   },
   {
@@ -39,34 +39,7 @@ const experiences = [
       "Developed deep learning model achieving 92% accuracy in smoke classification using satellite imagery. Built distributed computing pipeline to efficiently process 500+ high-resolution images. Published research paper in Computers, Materials & Continua (CMC) journal.",
     tech: ["Deep Learning", "Python", "Satellite Imagery", "Distributed Computing", "Research"],
     icon: Briefcase,
-  },
-  {
-    company: "Tech Company Inc",
-    role: "Senior Software Engineer",
-    duration: "2022 - Present",
-    description:
-      "Led development of scalable web applications using React and Node.js. Mentored junior developers and improved system performance by 40%.",
-    tech: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-    icon: Briefcase,
-  },
-  {
-    company: "Digital Solutions Ltd",
-    role: "Full Stack Developer",
-    duration: "2020 - 2022",
-    description:
-      "Developed and maintained multiple client projects. Implemented CI/CD pipelines and improved deployment efficiency.",
-    tech: ["React", "Express", "MongoDB", "Docker"],
-    icon: Briefcase,
-  },
-  {
-    company: "StartUp XYZ",
-    role: "Junior Developer",
-    duration: "2019 - 2020",
-    description:
-      "Built responsive web interfaces and contributed to backend API development. Collaborated with cross-functional teams.",
-    tech: ["JavaScript", "React", "Node.js", "MySQL"],
-    icon: Briefcase,
-  },
+  }
 ]
 
 export default function Experience() {
@@ -148,8 +121,8 @@ export default function Experience() {
                       initial={{ x: -10 }}
                       whileHover={{ x: 5 }}
                     >
-                      <span className="text-sm">View details</span>
-                      <ArrowRight size={16} />
+                      {/* <span className="text-sm">View details</span> */}
+                      {/* <ArrowRight size={16} /> */}
                     </motion.div>
                   </motion.div>
                 </motion.div>

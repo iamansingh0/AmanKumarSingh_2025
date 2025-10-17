@@ -8,6 +8,11 @@ export default function Home() {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
   }
 
+  const openResume = () => {
+    // Replace this URL with your actual resume URL
+    window.open("https://iamansingh0.github.io/amankumarsingh/cv.pdf", "_blank")
+  }
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -61,8 +66,11 @@ export default function Home() {
           >
             Explore My Work
           </button>
-          <button className="px-8 py-3 border border-cyan-500 text-cyan-400 font-bold rounded-lg hover:bg-cyan-500/10 transition-all hover:scale-105 transform cursor-pointer">
-            Download Resume
+          <button className="px-8 py-3 border border-cyan-500 text-cyan-400 font-bold rounded-lg hover:bg-cyan-500/10 
+          transition-all hover:scale-105 transform cursor-pointer"
+          onClick={openResume}
+          >
+            Resume
           </button>
         </motion.div>
 

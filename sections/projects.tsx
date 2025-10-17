@@ -4,6 +4,15 @@ import { motion } from "framer-motion"
 import { Github, ExternalLink, Star, Code2 } from "lucide-react"
 import { useEffect, useState } from "react"
 
+// Define selected repositories
+const FEATURED_REPOS = [
+  "AscendAI",
+  "Smoke-Detection-and-Segmentation",
+  "MyTube",
+  "AI-Code-Explainer---CodeSensei",
+  "Chat_socketIO",
+]
+
 interface GitHubRepo {
   name: string
   description: string
@@ -22,11 +31,23 @@ export default function Projects() {
     const loadProjects = async () => {
       try {
         const username = "iamansingh0"
-        const response = await fetch(`https://api.github.com/users/${username}/repos?sort=stars&per_page=6&type=owner`)
-
-        if (!response.ok) throw new Error("Failed to fetch repos")
-        const repoData = await response.json()
-        setProjects(repoData)
+        
+        // Fetch each repo individually to ensure we get the ones we want
+        const repoPromises = FEATURED_REPOS.map(repo => 
+          fetch(`https://api.github.com/repos/${username}/${repo}`)
+            .then(res => {
+              if (!res.ok) throw new Error(`Failed to fetch ${repo}`)
+              return res.json()
+            })
+            .catch(err => {
+              console.error(`Error fetching ${repo}:`, err)
+              return null
+            })
+        )
+        
+        const repos = await Promise.all(repoPromises)
+        // Filter out any null responses and maintain order
+        setProjects(repos.filter((repo): repo is GitHubRepo => repo !== null))
       } catch (error) {
         console.error("Error loading projects:", error)
       } finally {
@@ -38,7 +59,6 @@ export default function Projects() {
   }, [])
 
   const fallbackProjects: GitHubRepo[] = []
-
   const displayProjects = projects.length > 0 ? projects : fallbackProjects
 
   return (

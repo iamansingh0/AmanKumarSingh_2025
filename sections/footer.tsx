@@ -39,7 +39,7 @@ export default function Footer() {
                 <button
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
-                  className="block text-slate-400 hover:text-cyan-400 transition-colors"
+                  className="block text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer"
                 >
                   {section.label}
                 </button>

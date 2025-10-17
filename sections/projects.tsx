@@ -7,10 +7,12 @@ import { useEffect, useState } from "react"
 // Define selected repositories
 const FEATURED_REPOS = [
   "AscendAI",
+  "portfolio_2025",
   "Smoke-Detection-and-Segmentation",
   "MyTube",
   "AI-Code-Explainer---CodeSensei",
   "Chat_socketIO",
+  "amankumarsingh"
 ]
 
 interface GitHubRepo {

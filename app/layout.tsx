@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Space_Grotesk } from "next/font/google"
 import "./globals.css"
 import ThemeProvider from "@/components/theme-provider"
+import CursorBubbles from "@/components/cursor-bubbles"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.className} bg-slate-950 text-slate-100 dark:bg-slate-950 light:bg-white light:text-slate-900`}
       >
+        <CursorBubbles />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

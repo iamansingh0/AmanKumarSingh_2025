@@ -7,6 +7,11 @@ import { motion, useMotionValue } from "framer-motion"
 type Ripple = { id: number; x: number; y: number }
 
 export default function About() {
+
+  const openResume = () => {
+    window.open("https://iamansingh0.github.io/amankumarsingh/cv.pdf", "_blank")
+  }
+
   // mouse tracking (used for card tilt)
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
@@ -147,7 +152,9 @@ export default function About() {
               >
                 Connect
               </button>
-              <button className="px-4 py-2 rounded-md bg-white/6 text-slate-200 hover:bg-white/8 transition">Resume</button>
+              <button className="px-4 py-2 rounded-md bg-white/6 text-slate-200 hover:bg-white/8 transition"
+               onClick={openResume}
+               >Resume</button>
             </div>
           </div>
         </motion.div>

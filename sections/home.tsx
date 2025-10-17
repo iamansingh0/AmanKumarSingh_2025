@@ -9,7 +9,6 @@ export default function Home() {
   }
 
   const openResume = () => {
-    // Replace this URL with your actual resume URL
     window.open("https://iamansingh0.github.io/amankumarsingh/cv.pdf", "_blank")
   }
 

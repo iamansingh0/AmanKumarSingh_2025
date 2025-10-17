@@ -8,10 +8,10 @@ import CursorBubbles from "@/components/cursor-bubbles"
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Portfolio | Software Engineer",
+  title: "Aman Kumar Singh | Software Engineer",
   description: "Futuristic portfolio showcasing projects, skills, and experience",
   openGraph: {
-    title: "Portfolio | Software Engineer",
+    title: "Aman Kumar Singh | Software Engineer",
     description: "Futuristic portfolio showcasing projects, skills, and experience",
     type: "website",
   },

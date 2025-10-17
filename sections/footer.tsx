@@ -27,7 +27,7 @@ export default function Footer() {
         >
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold gradient-text mb-2">{"<Dev />"}</h3>
+            <h3 className="text-2xl font-bold gradient-text mb-2">{"<Aman />"}</h3>
             <p className="text-slate-400">Building the future, one line of code at a time.</p>
           </div>
 
@@ -50,13 +50,13 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="text-lg font-bold text-cyan-400 mb-4">Contact</h4>
-            <p className="text-slate-400 mb-2">Email: your@email.com</p>
-            <p className="text-slate-400">Location: Your City, Country</p>
+            <p className="text-slate-400 mb-2">amanks2205@email.com</p>
+            <p className="text-slate-400">Lucknow, India</p>
           </div>
         </motion.div>
 
         <div className="border-t border-white/10 pt-8 text-center text-slate-400">
-          <p>&copy; 2025 Your Name. All rights reserved.</p>
+          <p>&copy; 2025 Aman. All rights reserved.</p>
         </div>
       </div>
     </footer>

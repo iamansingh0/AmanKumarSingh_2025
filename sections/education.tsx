@@ -9,19 +9,10 @@ const education = [
     degree: "B.Tech in Computer Science Engineering",
     year: "2024",
     cgpa: "9.06/10",
-    details: "Specialized in Software Development and Web Technologies",
+    details: "DSA, OS, DBMS, CN, Web Development, ML",
     icon: GraduationCap,
     color: "from-cyan-400 to-blue-400",
-  },
-  {
-    institution: "Senior Secondary School",
-    degree: "High School Diploma",
-    year: "2015",
-    cgpa: "95%",
-    details: "Science Stream with focus on Mathematics and Physics",
-    icon: BookOpen,
-    color: "from-purple-400 to-pink-400",
-  },
+  }
 ]
 
 export default function Education() {
@@ -37,7 +28,7 @@ export default function Education() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Education</h2>
           <p className="text-slate-400 mb-16 text-lg">Academic background and achievements</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex flex-col gap-8">
             {education.map((edu, idx) => {
               const Icon = edu.icon
               return (
@@ -47,7 +38,7 @@ export default function Education() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: idx * 0.2 }}
                   viewport={{ once: true }}
-                  className="group relative"
+                  className="group relative w-full"
                 >
                   {/* Gradient background effect */}
                   <div
@@ -56,7 +47,7 @@ export default function Education() {
 
                   <motion.div
                     className="relative glass rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
-                    whileHover={{ y: -8, scale: 1.02 }}
+                    whileHover={{ y: -8, scale: 1.01 }}
                   >
                     {/* Icon with gradient background */}
                     <motion.div
